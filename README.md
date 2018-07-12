@@ -51,6 +51,8 @@ Currently it supports Bootstrap 4.x only. So that you have to add [Bootstrap 4](
 ### View
 #### FBV (Function based view)
 
+from django.core.paginator import Paginator
+
     def listing(request):
         contact_list = Contacts.objects.all()
         paginator = Paginator(contact_list, 25)
